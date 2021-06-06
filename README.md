@@ -1,4 +1,6 @@
 # brewhaus
+
+## Requirements:
 A take home test designing an API interface for a fictitious company
 
 Welcome to Brewhaus!
@@ -16,3 +18,10 @@ Feel free to embellish beyond that.
 While you are not obligated to use them, this repo comes with an API file and a Brewhaus image. **You are free to use anything else you would like!**
 
 Good luck!
+
+## For running locally:
+
+- Do `npm install`
+- Run the command `npm start`
+- Hit `http://localhost:3000/brewhaus`
+

@@ -32,6 +32,9 @@ const useStyles = makeStyles(() => ({
     flex: "1 0 auto"
   },
   button: {
+    textTransform: 'none'
+  },
+  cardActions: {
     justifyContent: 'flex-end'
   },
   pagination: {
@@ -99,9 +102,9 @@ export default function BeerList({location: {search}}) {
                       {beer.description}
                     </Typography>
                   </CardContent>
-                  <CardActions className={classes.button}>
+                  <CardActions className={classes.cardActions}>
                     <Link to={`/brewhaus/beer-details/${beer.id}`}>
-                      <Button size="small" color="primary">
+                      <Button size="small" color="primary" className={classes.button}>
                         VIEW DETAILS
                       </Button>
                     </Link>
@@ -114,6 +117,7 @@ export default function BeerList({location: {search}}) {
         <Card className={classes.pagination}>
           <Button
             color="primary"
+            className={classes.button}
             startIcon={<ArrowBackIosIcon/>}
             onClick={() => setPage(page - 1)}
             disabled={page === 1}
@@ -122,6 +126,7 @@ export default function BeerList({location: {search}}) {
           </Button>
           <Button
             color="primary"
+            className={classes.button}
             endIcon={<ArrowForwardIosIcon/>}
             onClick={() => setPage(page + 1)}
             disabled={beers.length !== perPage}
